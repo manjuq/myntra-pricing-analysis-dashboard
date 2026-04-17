@@ -1,0 +1,5 @@
+myntra_analysis.db
+*.csv
+__pycache__/
+.venv/
+.streamlit/secrets.toml
