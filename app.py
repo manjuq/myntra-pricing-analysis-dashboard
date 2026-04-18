@@ -161,7 +161,7 @@ sellthrough_data = run_query("""
         COUNT(*)                                    AS products,
         ROUND(AVG(sold_anything) * 100, 1)         AS sell_through_pct,
         ROUND(AVG(restocked) * 100, 1)             AS restock_pct,
-        ROUND(MEDIAN(first_inventory)::numeric, 0) AS median_start_inventory
+        ROUND(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY first_inventory)::numeric,0) AS median_start_inventory
     FROM product_level
     GROUP BY discount_bucket
     ORDER BY MIN(avg_discount)
