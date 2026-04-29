@@ -18,7 +18,7 @@ def run_query(query, params=None):
 
 # ── page config ──────────────────────────────────────────────────────────────
 st.set_page_config(page_title="Myntra Women's Dresses Analysis", layout="wide")
-st.title("Myntra Women's Dresses — Pricing & Discount Analysis")
+st.title("Myntra Women's Dresses : Pricing & Discount Analysis")
 st.caption("54,000 product snapshots · 20 days · 3 sort modes (Jan 12–31, 2026)")
 
 # ── row 1: top-level metrics ─────────────────────────────────────────────────
